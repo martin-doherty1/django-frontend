@@ -15,6 +15,8 @@ export default function Home() {
         <ExerciseInfo/>
         <ExerciseTypes/>
         <button onClick={() => router.push('/Search')}>go to search</button>
+        <br/>
+        <button onClick={() => router.push('/CreateExercise')}>Create Exercise</button>
       </QueryClientProvider>
     </>
   );

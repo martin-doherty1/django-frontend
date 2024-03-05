@@ -38,7 +38,7 @@ describe('GetExercises', () => {
         // Assertion
         expect(fetchMock).toHaveBeenCalledTimes(1);
         expect(exercises.length).toBe(2);
-        expect(fetchMock).toHaveBeenCalledWith(API_URLS.GET_EXERCISES);
+        expect(fetchMock).toHaveBeenCalledWith(API_URLS.GET_POST_EXERCISES);
     })
 
     it('returns error and status if not OK response code', async () => 
@@ -51,7 +51,7 @@ describe('GetExercises', () => {
 
         // Assertion
         expect(fetchMock).toHaveBeenCalledTimes(1);
-        expect(fetchMock).toHaveBeenCalledWith(API_URLS.GET_EXERCISES);
+        expect(fetchMock).toHaveBeenCalledWith(API_URLS.GET_POST_EXERCISES);
     })
 
     it('returns Error with message no results if no results from search', async () => 
@@ -64,6 +64,6 @@ describe('GetExercises', () => {
 
         // Assertion
         expect(fetchMock).toHaveBeenCalledTimes(1);
-        expect(fetchMock).toHaveBeenCalledWith(API_URLS.GET_EXERCISES)
+        expect(fetchMock).toHaveBeenCalledWith(API_URLS.GET_POST_EXERCISES)
     })
 })

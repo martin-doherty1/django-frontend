@@ -3,7 +3,7 @@ import Exercise from "../Models/Exercise";
 
 const GetExercises = async () =>
 {
-    const response: Response = await fetch(API_URLS.GET_EXERCISES);
+    const response: Response = await fetch(API_URLS.GET_POST_EXERCISES);
 
     if (!response.ok)
     {
