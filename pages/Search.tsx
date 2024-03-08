@@ -4,6 +4,7 @@ import searchExercises from '@/app/Services/ElasticSearches';
 import DebouncedValue from '@/app/Utils/DebouncedValue';
 import { useQuery } from 'react-query';
 import Exercise from '@/app/Models/Exercise';
+import Navbar from '@/app/Components/NavigationBar';
 
 const Search = () =>
 {
@@ -22,8 +23,18 @@ const Search = () =>
 
     return(
         <>
+            <Navbar/>
             <div className='m-5'>
-                <input type='text' className='border-4 rounded-full border-sky-500 pl-1' placeholder='Search Exercises' value={searchTerm} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)} />
+                
+                <div className="flex flex-1 items-center justify-center p-6">
+                    <div className="w-full max-w-lg">
+                        <div className="mt-5 sm:flex sm:items-center">
+                            <input id="search-bar" name='search-bar' 
+                            className="inline w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-3 leading-5 placeholder-gray-500 focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm" 
+                            placeholder="Keyword" type="search" value={searchTerm} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}/>
+                        </div>
+                    </div>
+                </div>
 
                 <br/>
                 <br/>
